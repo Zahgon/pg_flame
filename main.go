@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"os"
 
 	"pg_flame/pkg/html"
@@ -34,30 +33,6 @@ func main() {
 	}
 }
 
-func handleErr(err error) {
-	fmt.Fprintf(os.Stderr, "Error: %v", err)
-	os.Exit(1)
-}
+func handleErr(err error) { _ = "STUB: not implemented"; return }
 
-func printHelp() {
-	help := `pg_flame %s
-
-Turn Postgres query plans into flamegraphs.
-
-Usage:
-
-  pg_flame [options]
-
-Without Options:
-
-  Reads a JSON query plan from standard input and writes the
-  flamegraph html to standard output.
-
-Options:
-
-  -h, --help	print help information
-`
-
-	fmt.Printf(help, version)
-	os.Exit(0)
-}
+func printHelp() { _ = "STUB: not implemented"; return }
